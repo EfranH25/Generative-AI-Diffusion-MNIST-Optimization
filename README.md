@@ -1,6 +1,7 @@
 # Generative-AI-Diffusion-MNIST-Optimization
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/README images/images/best_model_cifar10.png)
+![cifar10](https://github.com/EfranH25/Generative-AI-Diffusion-MNIST-Optimization/blob/main/README%20images/best_model_cifar10.png)
+
 
 ## Abstract 
 
@@ -150,13 +151,12 @@ In addition to global applications of the pruning, we also experiment with local
 22. module.tconv1.weight: 576
 23. module.tconv1.bias: 1
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/README images/images/best_model_cifar10.png)
-
+![ncsn_char](https://github.com/EfranH25/Generative-AI-Diffusion-MNIST-Optimization/blob/main/README%20images/chart_ncsn.png)
 #### 4.2.3 Depthwise Convolution
 
 Depthwise Convolution is a method for reducing the number of parameters in a convolution (or transpose convolution) layer. It achieves this by splitting the the filters in a convolutional layer. Typically, without depthwise convolution, 1 filter is applied to all channels in a convolutional layer. With Depthwise Convolution, the input is split up into n groups, and n filters are applied to a single group. This is no different than splitting the inputs into and filters to n groups, performing separate convolutions, and then concatenating the result. This results in fewer parameters across the convolutional layer thus reducing they layer’s size.[1]
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/README images/images/best_model_cifar10.png)
+![ddpm_char](https://github.com/EfranH25/Generative-AI-Diffusion-MNIST-Optimization/blob/main/README%20images/chart_ddpm.png)
 
 We applied depthwise convolution by using the built in support in PyTorch’s Conv2d and TransposeConv2d classes. We modified our model architecture to take in a group variable during any Conv2d or TransposeConv2d step and retrained our entire model with group = 2 and group = 4.
 
@@ -303,12 +303,12 @@ Our best NCSN model was NCSN optmized with depthwise convolution at a group size
 | Base DDPM | ~17868145 | ~5300 | 146.77 |
 | Best DDPM | ~12668288 | ~5300 | 130.44 |
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/README images/images/best_model_cifar10.png)
+![best_model](https://github.com/EfranH25/Generative-AI-Diffusion-MNIST-Optimization/blob/main/README%20images/best_model_comparison.png)
 
 ### 5.2 Applying to CIFAR-10
 After determining our best models, for NCSN and DDPM, we determined overall that the DDPM + CFG model with depthwise convolution with a group size of 2 and pruned through an L1 Unstructured pruning method with dropout chance of 10% was the best model. As a final step, we were curious to see how this model architecture generalizes to a more diverse and complicated image set, so we trained this exact model on the CIFAR-10 data set. Below are our results in the order from top left to bottom right: truck, horse, dog, plane, car, bird, boat, deer, boat, bird
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/README images/images/best_model_cifar10.png)
+![cifar10](https://github.com/EfranH25/Generative-AI-Diffusion-MNIST-Optimization/blob/main/README%20images/best_model_cifar10.png)
 
 Given that we simply plugged the architecture into a new data set, we are pleasantly surprised by the results.
 
