@@ -2,6 +2,50 @@
 
 ![cifar10](https://github.com/EfranH25/Generative-AI-Diffusion-MNIST-Optimization/blob/main/README%20images/best_model_cifar10.png)
 
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+- [Generative-AI-Diffusion-MNIST-Optimization](#generative-ai-diffusion-mnist-optimization)
+  - [Table of Contents](#table-of-contents)
+  - [Abstract](#abstract)
+  - [1. Introduction](#1-introduction)
+    - [1.1. Problem Statement](#11-problem-statement)
+  - [2. Results Summary](#2-results-summary)
+    - [2.1. Procedure Overview](#21-procedure-overview)
+  - [3. Technical Approach: Developing Baseline](#3-technical-approach-developing-baseline)
+    - [3.1. Benchmarks Two Baseline Models](#31-benchmarks-two-baseline-models)
+      - [3.1.1 Noise-Conditioned Score Network](#311-noise-conditioned-score-network)
+      - [3.1.2 Denoising Diffusion Probabilistic Models](#312-denoising-diffusion-probabilistic-models)
+    - [3.2. Evaluation Metrics](#32-evaluation-metrics)
+      - [3.2.1 Metrics for NCSN Baseline](#321-metrics-for-ncsn-baseline)
+      - [3.2.2 Metrics for DDPM Baseline](#322-metrics-for-ddpm-baseline)
+  - [4. Technical Approach: Optimizing Models](#4-technical-approach-optimizing-models)
+    - [4.1. Fr ́echet Inception Distance](#41-fr-́echet-inception-distance)
+    - [4.2. Optimization Methods](#42-optimization-methods)
+      - [4.2.1 Quantization](#421-quantization)
+      - [4.2.2 Pruning](#422-pruning)
+      - [4.2.3 Depthwise Convolution](#423-depthwise-convolution)
+    - [4.3. NCSN Optimization Results](#43-ncsn-optimization-results)
+      - [4.3.1 Quantization Results](#431-quantization-results)
+    - [4.3.2 Quantization Observations](#432-quantization-observations)
+      - [4.3.3 Pruning Results](#433-pruning-results)
+      - [4.3.4 Pruning Observations](#434-pruning-observations)
+      - [4.3.5 Depthwise Convolution Results](#435-depthwise-convolution-results)
+      - [4.3.6 Depthwise Convolution Observations](#436-depthwise-convolution-observations)
+    - [4.4. DDPM Optimization](#44-ddpm-optimization)
+    - [4.5. DDPM Optimization Results](#45-ddpm-optimization-results)
+      - [4.5.1 Quantization Results](#451-quantization-results)
+      - [4.5.2 Quantization Observations](#452-quantization-observations)
+      - [4.5.3 Pruning Results](#453-pruning-results)
+      - [4.5.4 Pruning Observations](#454-pruning-observations)
+      - [4.5.5 Depthwise Convolution Result](#455-depthwise-convolution-result)
+      - [4.5.6 Depthwise Convolution Observations](#456-depthwise-convolution-observations)
+      - [4.5.7 Depthwise Convolution + Pruning](#457-depthwise-convolution--pruning)
+  - [5. Conclusion](#5-conclusion)
+    - [5.1 Best Model Results and Comparison](#51-best-model-results-and-comparison)
+    - [5.2 Applying to CIFAR-10](#52-applying-to-cifar-10)
+- [References](#references)
+
+
 
 ## Abstract 
 
