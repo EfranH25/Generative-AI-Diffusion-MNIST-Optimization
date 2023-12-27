@@ -1,5 +1,6 @@
 # Generative-AI-Diffusion-MNIST-Optimization
 
+![best_model_0-9](https://github.com/EfranH25/Generative-AI-Diffusion-MNIST-Optimization/blob/main/README%20images/best_model_0-9.png)
 ![cifar10](https://github.com/EfranH25/Generative-AI-Diffusion-MNIST-Optimization/blob/main/README%20images/best_model_cifar10.png)
 
 <!-- TABLE OF CONTENTS -->
